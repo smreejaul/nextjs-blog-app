@@ -10,7 +10,9 @@ export default function Navbar() {
     <nav className="border-b px-6 py-4 flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="font-bold text-xl">
-        Reejaul.dev
+        <span className="uppercase">Syed Reejaul Hussain</span>
+        <br />
+        <small>Principal Software Engineer</small>
       </Link>
 
       {/* Desktop Links */}
