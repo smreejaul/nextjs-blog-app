@@ -3,19 +3,14 @@ import Post from "@/lib/models/Post";
 
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  await connectDB();
-  const posts = await Post.find().select("slug").lean().exec();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  await connectDB();
   const { slug } = await params;
   const post = await Post.findOne({ slug }).lean().exec();
   if (!post) return { title: "Post not found" };
@@ -30,6 +25,7 @@ export default async function BlogPost({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  await connectDB();
   const { slug } = await params;
   const post = await Post.findOne({ slug }).lean().exec();
 
