@@ -2,6 +2,8 @@ import { connectDB } from "@/lib/db";
 import Post from "@/lib/models/Post";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function Blog() {
   await connectDB();
   const posts = await Post.find().sort({ date: -1 }).lean().exec();
