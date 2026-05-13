@@ -1,13 +1,13 @@
 import {
-    BadgeCheckIcon,
+    CheckBadgeIcon,
     CloudArrowUpIcon,
+    CommandLineIcon,
     CubeTransparentIcon,
-    DatabaseIcon,
+    ServerStackIcon,
     FolderOpenIcon,
     InformationCircleIcon,
     RocketLaunchIcon,
     SparklesIcon,
-    TerminalIcon,
     UserCircleIcon,
 } from "@heroicons/react/24/outline";
 
@@ -137,7 +137,7 @@ export default function InfoPage() {
             {/* Database Schema */}
             <section className="mb-12">
                 <div className="mb-4 flex items-center gap-3 text-3xl font-bold text-gray-900">
-                    <DatabaseIcon className="h-8 w-8 text-blue-600" />
+                    <ServerStackIcon className="h-8 w-8 text-blue-600" />
                     <span>Database Schema</span>
                 </div>
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -205,7 +205,7 @@ export default function InfoPage() {
             {/* Available Scripts */}
             <section className="mb-12">
                 <div className="mb-4 flex items-center gap-3 text-3xl font-bold text-gray-900">
-                    <TerminalIcon className="h-8 w-8 text-blue-600" />
+                    <CommandLineIcon className="h-8 w-8 text-blue-600" />
                     <span>Available Scripts</span>
                 </div>
                 <div className="space-y-2 text-sm">
@@ -269,13 +269,13 @@ export default function InfoPage() {
             {/* Key Features Summary */}
             <section className="mb-12">
                 <div className="mb-4 flex items-center gap-3 text-3xl font-bold text-gray-900">
-                    <BadgeCheckIcon className="h-8 w-8 text-blue-600" />
+                    <CheckBadgeIcon className="h-8 w-8 text-blue-600" />
                     <span>Key Features Summary</span>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                     <div className="flex gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <BadgeCheckIcon className="h-5 w-5" />
+                            <CheckBadgeIcon className="h-5 w-5" />
                         </div>
                         <div>
                             <p className="font-bold">Fully Responsive</p>
@@ -284,7 +284,7 @@ export default function InfoPage() {
                     </div>
                     <div className="flex gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <BadgeCheckIcon className="h-5 w-5" />
+                            <CheckBadgeIcon className="h-5 w-5" />
                         </div>
                         <div>
                             <p className="font-bold">Type-Safe</p>
@@ -293,7 +293,7 @@ export default function InfoPage() {
                     </div>
                     <div className="flex gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <BadgeCheckIcon className="h-5 w-5" />
+                            <CheckBadgeIcon className="h-5 w-5" />
                         </div>
                         <div>
                             <p className="font-bold">SEO Optimized</p>
@@ -302,7 +302,7 @@ export default function InfoPage() {
                     </div>
                     <div className="flex gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <BadgeCheckIcon className="h-5 w-5" />
+                            <CheckBadgeIcon className="h-5 w-5" />
                         </div>
                         <div>
                             <p className="font-bold">Fast Performance</p>
@@ -311,7 +311,7 @@ export default function InfoPage() {
                     </div>
                     <div className="flex gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <BadgeCheckIcon className="h-5 w-5" />
+                            <CheckBadgeIcon className="h-5 w-5" />
                         </div>
                         <div>
                             <p className="font-bold">Easy Admin</p>
@@ -320,7 +320,7 @@ export default function InfoPage() {
                     </div>
                     <div className="flex gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <BadgeCheckIcon className="h-5 w-5" />
+                            <CheckBadgeIcon className="h-5 w-5" />
                         </div>
                         <div>
                             <p className="font-bold">Email Integration</p>
