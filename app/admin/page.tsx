@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export default function AdminPage() {
   const [form, setForm] = useState({
@@ -131,7 +132,10 @@ export default function AdminPage() {
         </button>
 
         {status === "success" && (
-          <p className="text-green-600 text-sm text-center">{message} ✅</p>
+          <p className="text-green-600 text-sm text-center flex items-center justify-center gap-2">
+            <CheckCircleIcon className="h-4 w-4" />
+            {message}
+          </p>
         )}
         {status === "error" && (
           <p className="text-red-500 text-sm text-center">{message}</p>

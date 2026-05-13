@@ -17,15 +17,22 @@ export async function POST(request: NextRequest) {
     await connectDB();
     const post = await Post.create({ title, slug, date, excerpt, content });
     return NextResponse.json({ success: true, post }, { status: 201 });
-  } catch (error: any) {
-    if (error.code === 11000) {
+  } catch (error) {
+    type MongoError = Error & { code?: number };
+    const err = error as MongoError;
+
+    if (err.code === 11000) {
       return NextResponse.json(
         { error: "A post with this slug already exists" },
         { status: 400 },
       );
     }
+
     return NextResponse.json(
-      { error: "Failed to create post", details: error.message },
+      {
+        error: "Failed to create post",
+        details: err.message ?? "Unexpected error",
+      },
       { status: 500 },
     );
   }

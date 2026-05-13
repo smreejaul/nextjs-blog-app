@@ -37,7 +37,7 @@ export async function GET() {
     await Post.deleteMany({});
     await Post.insertMany(posts);
     return NextResponse.json({ success: true, message: "Database seeded!" });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { success: false, error: "Seeding failed" },
       { status: 500 },
