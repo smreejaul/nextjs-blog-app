@@ -1,4 +1,5 @@
 import { resumeData } from "@/lib/resumeData";
+import ProjectGallery from "@/component/ProjectGallery";
 
 export default function Projects() {
   return (
@@ -75,6 +76,9 @@ export default function Projects() {
                     ))}
                   </ul>
                 </div>
+
+                {/* Project Visuals / Lightbox */}
+                {'images' in project && <ProjectGallery images={(project as { images?: string[] }).images} />}
               </div>
 
               {/* Bottom Accent */}
