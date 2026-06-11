@@ -78,7 +78,7 @@ export default function Projects() {
                 </div>
 
                 {/* Project Visuals / Lightbox */}
-                {'images' in project && <ProjectGallery images={(project as { images?: string[] }).images} />}
+                {'images' in project && <ProjectGallery images={(project as { images?: { src: string, label: string }[] }).images} />}
               </div>
 
               {/* Bottom Accent */}
