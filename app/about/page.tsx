@@ -6,7 +6,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       {/* Hero */}
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-10">
+      <div className="max-w-4xl mx-auto pt-20 pb-10">
         <h1 className="text-5xl font-bold mb-6 text-gray-900">About Me</h1>
         <p className="text-xl text-gray-600 leading-relaxed">
           {resumeData.summary}
@@ -16,11 +16,15 @@ export default function About() {
       {/* Core Skills */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-gray-900">Technical Skills</h2>
+          <h2 className="text-3xl font-bold mb-12 text-gray-900">
+            Technical Skills
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {Object.entries(resumeData.coreSkills).map(([category, skills]) => (
               <div key={category}>
-                <h3 className="text-lg font-bold mb-4 text-gray-900">{category}</h3>
+                <h3 className="text-lg font-bold mb-4 text-gray-900">
+                  {category}
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <span
@@ -40,14 +44,26 @@ export default function About() {
       {/* Domain Expertise */}
       <section className="py-16 px-6 bg-gradient-to-r from-blue-50 to-purple-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-gray-900">Domain Expertise</h2>
+          <h2 className="text-3xl font-bold mb-12 text-gray-900">
+            Domain Expertise
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {resumeData.domainExpertise.map((domain, idx) => (
               <div key={idx} className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-8 w-8 rounded-lg bg-blue-600">
-                    <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="h-5 w-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -65,9 +81,13 @@ export default function About() {
               <BriefcaseIcon className="h-6 w-6" />
             </div>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600">Experience</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600">
+                Experience
+              </p>
               <p className="text-gray-700">
-                Professional experience has been moved to a dedicated page so the About section stays focused on skills, expertise, certifications, and education.
+                Professional experience has been moved to a dedicated page so
+                the About section stays focused on skills, expertise,
+                certifications, and education.
               </p>
             </div>
           </div>
@@ -107,7 +127,9 @@ export default function About() {
                   <div key={idx}>
                     <p className="font-semibold text-lg">{edu.degree}</p>
                     <p className="text-gray-300">{edu.school}</p>
-                    {edu.year && <p className="text-gray-400 text-sm">{edu.year}</p>}
+                    {edu.year && (
+                      <p className="text-gray-400 text-sm">{edu.year}</p>
+                    )}
                   </div>
                 ))}
               </div>

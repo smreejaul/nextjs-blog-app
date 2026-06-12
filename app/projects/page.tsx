@@ -1,15 +1,22 @@
 import { resumeData } from "@/lib/resumeData";
 import ProjectGallery from "@/component/ProjectGallery";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function Projects() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       {/* Header */}
-      <div className="max-w-5xl mx-auto px-6 pt-20 pb-12">
-        <h1 className="text-5xl font-bold mb-4 text-gray-900">Featured Projects</h1>
-        <p className="text-xl text-gray-600">
-          Enterprise SaaS solutions built for the financial and compliance sectors
-        </p>
+      <div className="max-w-5xl mx-auto pt-15 pb-10 text-center">
+        <h1 className="text-5xl font-bold mb-4 text-gray-900">
+          Featured Projects
+        </h1>
       </div>
 
       {/* Projects Grid */}
@@ -69,7 +76,11 @@ export default function Projects() {
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                         <span>{highlight}</span>
                       </li>
@@ -78,7 +89,14 @@ export default function Projects() {
                 </div>
 
                 {/* Project Visuals / Lightbox */}
-                {'images' in project && <ProjectGallery images={(project as { images?: { src: string, label: string }[] }).images} />}
+                {"images" in project && (
+                  <ProjectGallery
+                    images={
+                      (project as { images?: { src: string; label: string }[] })
+                        .images
+                    }
+                  />
+                )}
               </div>
 
               {/* Bottom Accent */}
@@ -91,9 +109,12 @@ export default function Projects() {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to start your project?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to start your project?
+          </h2>
           <p className="text-xl text-gray-300 mb-10">
-            Let&apos;s build something amazing together. Get in touch to discuss your requirements.
+            Let&apos;s build something amazing together. Get in touch to discuss
+            your requirements.
           </p>
           <a
             href="/contact"
@@ -107,27 +128,34 @@ export default function Projects() {
       {/* Additional Info */}
       <section className="px-6 py-20 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-3xl font-bold mb-12 text-gray-900">What I Bring to Your Project</h3>
+          <h3 className="text-3xl font-bold mb-12 text-gray-900">
+            What I Bring to Your Project
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Scalable Architecture",
-                description: "Component-driven design systems that scale across product lines",
+                description:
+                  "Component-driven design systems that scale across product lines",
               },
               {
                 title: "Performance Optimized",
-                description: "Handling 50,000+ rows of data with virtualisation and intelligent caching",
+                description:
+                  "Handling 50,000+ rows of data with virtualisation and intelligent caching",
               },
               {
                 title: "Enterprise Ready",
-                description: "Compliance-aligned solutions for regulated industries like banking",
+                description:
+                  "Compliance-aligned solutions for regulated industries like banking",
               },
             ].map((item, idx) => (
               <div
                 key={idx}
                 className="p-6 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100"
               >
-                <h4 className="text-lg font-bold text-gray-900 mb-3">{item.title}</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">
+                  {item.title}
+                </h4>
                 <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
