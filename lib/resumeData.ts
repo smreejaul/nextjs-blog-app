@@ -12,11 +12,11 @@ export const resumeData = {
   },
   availability: "Open to Remote & Relocation · Available for Immediate Joining",
   summary:
-    "Principal UX Engineer with 11+ years of experience building high-performance, scalable web applications for enterprise SaaS in the regulated financial sector. Deep expertise in React.js, Next.js, JavaScript, and Redux — with a track record of shipping component libraries that reduced feature delivery time by 30%, and integrating AI-driven workflows into compliance and analytics platforms used by US banking institutions.",
+    "Principal UX Engineer with 11+ years of experience building high-performance, scalable web applications for enterprise SaaS in the regulated financial sector. Deep expertise in React.js, Next.js, JavaScript, and Redux with a track record of shipping component libraries that reduced feature delivery time by 30%, and integrating AI-driven workflows into compliance and analytics platforms used by US banking institutions. Experienced across a broad range of product domains including GRC, DMS, CMS, LMS, CRM, job portals, healthcare marketplaces, and visa consulting platforms. Proven in leading cross-functional teams, mentoring engineers, and setting frontend architecture standards at scale.",
 
   coreSkills: {
     "Core Stack": [
-      "React 18+",
+      "React",
       "Next.js 16",
       "JavaScript ES6+",
       "jQuery",
@@ -224,7 +224,7 @@ export const resumeData = {
   ],
 
   certifications: [
-    "ReactJS — Complete Guide with Hooks, Redux & Context (2023)",
+    "ReactJS — Complete Guide with Hooks, Redux & Context",
     "Advanced JavaScript & Frontend Performance Optimisation",
   ],
 
@@ -235,7 +235,7 @@ export const resumeData = {
         "Sir Syed University of Engineering & Technology (SSUET), Karachi",
     },
     {
-      degree: "Bachelor of Commerce (B.Com)",
+      degree: "Bachelor",
       school: "University of Karachi",
       year: "2011",
     },

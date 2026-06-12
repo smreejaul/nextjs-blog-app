@@ -58,7 +58,7 @@ export default function InfoPage() {
                     </div>
                     <div className="border border-gray-200 rounded-lg p-4">
                         <h3 className="font-bold mb-2">Projects Showcase</h3>
-                        <p className="text-sm text-gray-600">Display portfolio projects with descriptions and tech stack</p>
+                        <p className="text-sm text-gray-600">Display portfolio projects with descriptions, tech stack, and interactive image galleries (with lightbox & sliders)</p>
                     </div>
                     <div className="border border-gray-200 rounded-lg p-4">
                         <h3 className="font-bold mb-2">Contact Form</h3>
@@ -123,7 +123,7 @@ export default function InfoPage() {
                     <div className="ml-4">├── blog/ (Blog pages)</div>
                     <div className="ml-4">├── contact/ (Contact form)</div>
                     <div className="ml-4">├── projects/ (Projects page)</div>
-                    <div className="ml-4">├── component/ (Navbar)</div>
+                    <div className="ml-4">├── component/ (Navbar, ProjectGallery)</div>
                     <div className="ml-4">├── globals.css (Global styles)</div>
                     <div className="ml-4">├── layout.tsx (Root layout)</div>
                     <div className="ml-4">└── page.tsx (Home page)</div>
@@ -333,7 +333,7 @@ export default function InfoPage() {
             {/* Footer */}
             <section className="pt-8 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
-                    <strong>Version:</strong> 0.1.0 • <strong>Last Updated:</strong> May 13, 2026
+                    <strong>Version:</strong> 0.1.0 • <strong>Last Updated:</strong> June 13, 2026
                 </p>
                 <p className="text-sm text-gray-500 mt-2">
                     For more detailed information, refer to the comprehensive README documentation.
